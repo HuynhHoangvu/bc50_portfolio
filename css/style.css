@@ -1,0 +1,164 @@
+* {
+  font-size: 16px;
+}
+
+/* header */
+header {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+header .logo i {
+  color: green;
+}
+
+header .logo span {
+  font-size: 2rem;
+}
+
+header .menu li {
+  margin: 0 0.8rem;
+}
+
+header .menu li a {
+  color: white !important;
+  transition: all 0.5s;
+}
+
+header .menu li.active a {
+  color: green !important;
+}
+
+header .menu li a::after {
+  content: "";
+  background-color: green;
+  width: 0;
+  height: 3px;
+  display: block;
+  transition: all 0.5s;
+}
+
+header .menu li.active a::after {
+  width: 100%;
+}
+
+header .menu li:hover a {
+  color: green !important;
+}
+
+header .menu li:hover a::after {
+  width: 100%;
+}
+
+/* carousel */
+.carousel-item {
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+.carousel-item:nth-child(1) {
+  background-image: url("./../images/mountains-1.jpg");
+}
+
+.carousel-item:nth-child(2) {
+  background-image: url("./../images/mountains.jpg");
+}
+
+.carousel-item:nth-child(3) {
+  background-image: url("./../images/finland.jpg");
+}
+
+.carousel-caption-thumb {
+  width: 150px;
+  margin: 0 auto;
+}
+
+.carousel-caption-thumb img {
+  border-radius: 50%;
+}
+
+.carousel-caption {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#projects .card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #8080806b;
+  cursor: pointer;
+}
+
+#projects .card-title {
+  font-size: 1rem;
+}
+
+#projects .card-body {
+  border: 1px solid #8080806b;
+  border-radius: 0 0 20px 20px;
+  transition: all 0.5s;
+}
+
+#projects .card:hover .card-body {
+  border-color: green;
+  border-top-color: transparent;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+  background-color: #35a22c;
+  color: #fff;
+  border-color: #35a22c;
+}
+.nav-pills .nav-link{
+  border: 1px solid black;
+  margin: 0 5px;
+  color: black;
+}
+/* SERVICES */
+#services{
+  background-image: url(../images/3.jpg);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+   position: relative;
+   padding: 150px 0 150px;
+}
+#services .title{
+  position: relative;
+}
+.services__overlay{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.589);
+}
+#services .card {
+  background-color: rgba(255, 255, 255, 0.123);
+  backdrop-filter: blur(2px);
+  color: white;
+  padding: 2rem;
+  transition: all 0.5s;
+
+}
+#services .card:hover{
+  background-color: black;
+  border: 1px solid white;
+}
+#services .card-body i{
+ font-size: 3rem;
+  color: #35a22c;
+}
+#services .card-body h4{
+  margin: 1rem 0;
+} 
+
+@media only screen and (max-width: 576px){
+  #services .card{
+  margin: 1rem;
+  }
+}
